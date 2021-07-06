@@ -2,15 +2,21 @@
   "name": "cirno-bot",
   "version": "1.0.0",
   "description": "A discord bot using discord.js",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "node ."
+    "dev": "nodemon src/index.js",
+    "lint": "eslint --ext .js,.ts . --fix"
   },
   "author": "Victor Neves",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.5.3",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "nodemon": "^2.0.9"
   }
 }
