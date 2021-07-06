@@ -1,0 +1,16 @@
+{
+  "name": "cirno-bot",
+  "version": "1.0.0",
+  "description": "A discord bot using discord.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Neves",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  }
+}
