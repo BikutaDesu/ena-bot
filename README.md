@@ -31,7 +31,9 @@ cd cirno-bot
 npm i
 ```
 
-4. To inform the **bot token** you will need to create a file named `.env` ant put a variable named `DISCORD_TOKEN` with the token given to you by the [Discord Developer Portal](https://discord.com/developers/applications)
+4. To inform the **bot token** you will need to create a file named `.env` at the root of the project and put a variable named `DISCORD_TOKEN` with the token given to you by the [Discord Developer Portal](https://discord.com/developers/applications)
+
+[![Enviroment File](https://github.com/BikutaDesu/cirno-bot/blob/assets/images/env_example.png)](https://raw.githubusercontent.com/BikutaDesu/cirno-bot/assets/images/env_example.png)
 
 ## Run app
 
