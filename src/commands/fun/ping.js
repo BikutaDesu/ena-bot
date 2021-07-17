@@ -2,7 +2,7 @@ export default {
   name: 'ping',
   description: 'Ping!',
   args: false,
-  cooldown: 5,
+  cooldownAmount: 5,
   execute(message, args) {
     message.channel.send('Pong 🏓');
   },
