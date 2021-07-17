@@ -2,6 +2,7 @@ import Discord from 'discord.js';
 import dotenv from 'dotenv';
 import getCommands from './utils/getCommands.js';
 import checkCooldown from './utils/checkCooldown.js';
+import checkArgs from './utils/checkArgs.js';
 import configs from '../config.json';
 
 dotenv.config();
@@ -10,7 +11,8 @@ const client = new Discord.Client();
 client.commands = getCommands();
 client.cooldowns = new Discord.Collection();
 
-const prefix = configs.defaultPrefix;
+const prefix = configs.prefix;
+console.log(prefix)
 
 client.on('ready', () => {
   console.log(`Cirno Bot is Ready!`);
@@ -33,13 +35,10 @@ client.on('message', (message) => {
         1
       )} segundo(s) antes de usar o comando \`${command.name}\` novamente.`
     );
-  } 
+  }
 
-  if (command.args && !args.length) {
-    let reply = `Você não informou nenhum argumento, ${message.author}`;
-    if (command.usage) {
-      reply += `\nForma de usar o comando: \`${prefix}${commandName} ${command.usage}\``;
-    }
+  const reply = checkArgs(args, command, message);
+  if (reply) {
     return message.channel.send(reply);
   }
 
