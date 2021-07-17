@@ -25,10 +25,12 @@ git clone git@github.com:BikutaDesu/cirno-bot.git
 cd cirno-bot
 ```
 
-3. To **install dependencies** you will need to have [NodeJS](https://nodejs.org/en) installed:
+3. To **install dependencies** you will need to have [NodeJS](https://nodejs.org/en) installed, you can also install dependencies using [yarn](https://yarnpkg.com/):
 
 ```bash
 npm i
+#or
+yarn
 ```
 
 4. To inform the **bot token** you will need to create a file named `.env` at the root of the project and put a variable named `DISCORD_TOKEN` with the token given to you by the [Discord Developer Portal](https://discord.com/developers/applications)
