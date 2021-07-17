@@ -1,4 +1,4 @@
-import { Collection } from "discord.js";
+import { Collection } from 'discord.js';
 
 export default (client, command, message) => {
   const { cooldowns } = client;
@@ -23,5 +23,5 @@ export default (client, command, message) => {
   }
 
   timestamps.set(message.author.id, now);
-  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount)
-}
+  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+};

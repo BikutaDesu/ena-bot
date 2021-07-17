@@ -12,7 +12,7 @@ client.commands = getCommands();
 client.cooldowns = new Discord.Collection();
 
 const prefix = configs.prefix;
-console.log(prefix)
+console.log(prefix);
 
 client.on('ready', () => {
   console.log(`Cirno Bot is Ready!`);
