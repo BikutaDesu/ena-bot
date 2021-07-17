@@ -15,7 +15,10 @@ export default (client, command, message) => {
 
     if (now < expirationTime) {
       const timeLeft = (expirationTime - now) / 1000;
-      return timeLeft;
+      const reply = `por favor espere mais ${timeLeft.toFixed(
+        1
+      )} segundo(s) antes de usar o comando \`${command.name}\` novamente.`;
+      return reply;
     }
   }
 

@@ -28,16 +28,12 @@ client.on('message', (message) => {
 
   const command = client.commands.get(commandName);
 
-  const timeLeft = checkCooldown(client, command, message);
-  if (timeLeft) {
-    return message.reply(
-      `por favor espere mais ${timeLeft.toFixed(
-        1
-      )} segundo(s) antes de usar o comando \`${command.name}\` novamente.`
-    );
+  let reply = checkCooldown(client, command, message);
+  if (reply) {
+    return message.reply(reply);
   }
 
-  const reply = checkArgs(args, command, message);
+  reply = checkArgs(args, command, message);
   if (reply) {
     return message.channel.send(reply);
   }
