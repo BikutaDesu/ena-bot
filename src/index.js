@@ -1,14 +1,14 @@
-import Discord from 'discord.js';
+import Discord from 'discord.js'
 import dotenv from 'dotenv';
 import getCommands from './utils/getCommands.js';
-// import config from './config.json'; - perguntar depois para o Rodrigo
+import configs from '../config.json';
 
 dotenv.config();
 const client = new Discord.Client();
 
 client.commands = getCommands();
 
-const prefix = 'c!';
+const prefix = configs.defaultPrefix;
 
 client.on('ready', () => {
   console.log(`Cirno Bot is Ready!`);
