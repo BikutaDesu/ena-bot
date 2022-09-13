@@ -1,4 +1,4 @@
-# Cirno Bot
+# Ena Bot
 
 **This project** was made with the purpose of learning more about JavaScript, it uses the [Discord.js](https://discord.js.org/#/) library to make a bot that interacts with discord servers.
 
